@@ -24,12 +24,13 @@ def get_cook_book_from_file(file):
             dish = line.strip().lower()
             ingredient_number = int(f.readline().strip())
             ingredients = []
-            for i in range(ingredient_number):
-                ingredients.append({})
+            for _ in range(ingredient_number):
+                ingredient = {}
                 ingredient_properties = f.readline().strip().lower().split(' | ')
-                ingredients[i]['ingredient_name'] = ingredient_properties.pop(0)
-                ingredients[i]['quantity'] = int(ingredient_properties.pop(0))
-                ingredients[i]['measure'] = ingredient_properties.pop(0)
+                ingredient['ingredient_name'] = ingredient_properties.pop(0)
+                ingredient['quantity'] = int(ingredient_properties.pop(0))
+                ingredient['measure'] = ingredient_properties.pop(0)
+                ingredients.append(ingredient)
             f.readline()
 
             cook_book[dish] = ingredients
