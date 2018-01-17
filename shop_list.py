@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # cook_book = {
 #     'яичница': [
 #         {'ingredient_name': 'яйца', 'quantity': 2, 'measure': 'шт.'},

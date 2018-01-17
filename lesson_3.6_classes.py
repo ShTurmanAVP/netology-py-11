@@ -53,10 +53,38 @@ class Goose(Birds):
         self.properties.append('produce_fluff')
 
 
-cow = Mammals('large', 200)
-goat = Mammals('medium', 50)
-sheep = Mammals('medium', 60)
-pig = Mammals('medium', 100)
+class Cow(Mammals):
+    def __init__(self, size, weight):
+        super().__init__(size, weight)
+        self.properties.append('produce_beef')
+        self.properties.append('has_horns')
+
+
+class Goat(Mammals):
+    def __init__(self, size, weight):
+        super().__init__(size, weight)
+        self.properties.append('produce_goat')
+        self.properties.append('has_horns')
+
+
+class Sheep(Mammals):
+    def __init__(self, size, weight):
+        super().__init__(size, weight)
+        self.properties.append('produce_mutton')
+        self.properties.append('produce_wool')
+
+
+class Pig(Mammals):
+    def __init__(self, size, weight):
+        super().__init__(size, weight)
+        self.properties.append('produce_pork')
+        self.properties.append('produce_fat')
+
+
+cow = Cow('large', 200)
+goat = Goat('large', 200)
+sheep = Sheep('large', 200)
+pig = Pig('large', 200)
 
 duck = Duck('small', 4)
 chicken = Chicken('small', 5)

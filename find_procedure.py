@@ -73,8 +73,6 @@ def print_and_count(lst):
 
 def main():
     migrations_path = os.path.join(current_dir, migrations)
-    print(migrations_path)
-
     sql_files = get_sql_files_from_dir(migrations_path)
     search_files_by_input(sql_files, migrations_path)
 
